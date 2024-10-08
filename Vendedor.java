@@ -1,4 +1,5 @@
-package com.mycompany.projetobonus;
+package Principal;
+
 
 public class Vendedor extends Funcionario {
    private double comissao;
@@ -39,3 +40,5 @@ public class Vendedor extends Funcionario {
         this.qtdVendas = qtdVendas;
     }
 }
+
+    
