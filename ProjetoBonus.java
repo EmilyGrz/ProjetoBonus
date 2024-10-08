@@ -1,44 +1,51 @@
+/**
+A ideia é uma vidracaria. Nela contem três departamentos: venda de vidro temperado, venda de vidro comum e venda de vidro laminado. 
+Em cada departamento temos dois vendedores e um gerente.
 
-package com.mycompany.projetobonus;
+Optei por contabilizar a comissão como sendo 10% do valor total de vendas do departamento.
+ */
+
+package Principal;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProjetoBonus {
-
-    public static void main(String[] args) { 
+public class ProjetoModuloBonus {
+ public static void main(String[] args) { 
         
-        Departamento d1 = new Departamento("Setor de Venda de Vidro temperado", 40000);
-        Departamento d2 = new Departamento("Setor de Venda de vidro comum", 80000);
-        Departamento d3 = new Departamento("Setor de Venda de vidro laminado", 10000);
+    
+        Departamento dep1 = new Departamento("Setor de Venda de Vidro temperado", 40000);
+        Departamento dep2 = new Departamento("Setor de Venda de vidro comum", 80000);
+        Departamento dep3 = new Departamento("Setor de Venda de vidro laminado", 10000);
+        
+        
+        Vendedor vend1 = new Vendedor("Vendedor1", 150000, 100, dep1);
+        Vendedor vend2 = new Vendedor("Vendedor2", 150000, 100, dep1);
+        Gerente ger1 = new Gerente("Gerente1", 140000, dep1);
 
-        Vendedor v1 = new Vendedor("Vendedor1", 150000, 100, d1);
-        Vendedor v2 = new Vendedor("Vendedor2", 150000, 100, d1);
-        Gerente g1 = new Gerente("Gerente1", 140000, d1);
+        Vendedor vend3 = new Vendedor("Vendedor3", 120000, 100, dep2);
+        Vendedor vend4 = new Vendedor("Vendedor4", 160000, 100, dep2);
+        Gerente ger2 = new Gerente("Gerente2", 140000, dep2);
 
-        Vendedor v3 = new Vendedor("Vendedor3", 120000, 100, d2);
-        Vendedor v4 = new Vendedor("Vendedor4", 160000, 100, d2);
-        Gerente g2 = new Gerente("Gerente2", 140000, d2);
-
-        Vendedor v5 = new Vendedor("Vendedor5", 120000, 100, d3);
-        Vendedor v6 = new Vendedor("Vendedor6", 115000, 100, d3);
-        Gerente g3 = new Gerente("Gerente3", 140000, d3);
+        Vendedor vend5 = new Vendedor("Vendedor5", 120000, 100, dep3);
+        Vendedor vend6 = new Vendedor("Vendedor6", 115000, 100, dep3);
+        Gerente ger3 = new Gerente("Gerente3", 140000, dep3);
 
         List<Funcionario> funcionarios = new ArrayList<>();
-        funcionarios.add(v1);
-        funcionarios.add(v2);
-        funcionarios.add(g1);
-        funcionarios.add(v3);
-        funcionarios.add(v4);
-        funcionarios.add(g2);
-        funcionarios.add(v5);
-        funcionarios.add(v6);
-        funcionarios.add(g3);
+        funcionarios.add(vend1);
+        funcionarios.add(vend2);
+        funcionarios.add(ger1);
+        funcionarios.add(vend3);
+        funcionarios.add(vend4);
+        funcionarios.add(ger2);
+        funcionarios.add(vend5);
+        funcionarios.add(vend6);
+        funcionarios.add(ger3);
 
         List<Departamento> departamentos = new ArrayList<>();
-        departamentos.add(d1);
-        departamentos.add(d2);
-        departamentos.add(d3);
+        departamentos.add(dep1);
+        departamentos.add(dep2);
+        departamentos.add(dep3);
 
         Controle controle = new Controle(funcionarios, departamentos);
         int resultado = controle.calcularBonus();
@@ -52,3 +59,4 @@ public class ProjetoBonus {
         }
     }
 }
+
