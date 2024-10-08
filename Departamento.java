@@ -1,8 +1,7 @@
-
-package com.mycompany.projetobonus;
+package Principal;
 
 public class Departamento {
-    
+     
    private String id;
     private double valorVendas;
 
@@ -19,3 +18,4 @@ public class Departamento {
         return this.valorVendas;
     }
 }
+
