@@ -1,8 +1,7 @@
-package com.mycompany.projetobonus;
-
+package Principal;
 
 public class Funcionario {
-    private String id;
+     private String id;
     private double salario;
     private String cargo;
     private Departamento departamento;
@@ -40,4 +39,5 @@ public class Funcionario {
 
 }
     
+
 
