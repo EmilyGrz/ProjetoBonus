@@ -1,5 +1,4 @@
-
-package com.mycompany.projetobonus;
+package Principal;
 
 public class Gerente extends Funcionario {
     
@@ -8,3 +7,4 @@ public class Gerente extends Funcionario {
         super(id, salario, "Gerente", departamento);
     }
 }
+
