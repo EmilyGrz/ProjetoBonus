@@ -1,9 +1,7 @@
-package com.mycompany.projetobonus;
+package Principal;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
 
 public class Controle {private List<Funcionario> funcionarios;
     private List<Departamento> departamentos;
@@ -92,3 +90,5 @@ public class Controle {private List<Funcionario> funcionarios;
         }
     }
 }
+    
+
